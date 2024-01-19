@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.config.local.json ",
-    "start:prod": "ng serve --proxy-config proxy.config.prod.json ",
+    "start": "ng serve",
+    "start:prod": "ng serve",
     "build": "ng build --configuration=production && gzipper compress --gzip --brotli ./dist/public-pool-ui/",
     "build:github": "ng build --configuration=production && echo \"web.public-pool.io\" > dist/public-pool-ui/CNAME",
     "watch": "ng build --watch --configuration development",
