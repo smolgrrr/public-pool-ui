@@ -13,9 +13,9 @@ export class WorkerService {
   ) { }
 
   public getGroupWorkerInfo(address: string, workerName: string): Observable<any> {
-    return this.httpClient.get(`http://${window.location.hostname}:2019/api/client/${address}/${workerName}`);
+    return this.httpClient.get(`${window.location.protocol}//${window.location.hostname}:2019/api/client/${address}/${workerName}`);
   }
   public getWorkerInfo(address: string, workerName: string, workerId: string): Observable<any> {
-    return this.httpClient.get(`http://${window.location.hostname}:2019/api/client/${address}/${workerName}/${workerId}`);
+    return this.httpClient.get(`${window.location.protocol}//${window.location.hostname}:2019/api/client/${address}/${workerName}/${workerId}`);
   }
 }

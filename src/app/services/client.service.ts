@@ -14,9 +14,9 @@ export class ClientService {
   ) { }
 
   public getClientInfo(address: string) {
-    return this.httpClient.get(`http://${window.location.hostname}:2019/api/client/${address}`);
+    return this.httpClient.get(`${window.location.protocol}//${window.location.hostname}:2019/api/client/${address}`);
   }
   public getClientInfoChart(address: string) {
-    return this.httpClient.get(`http://${window.location.hostname}:2019/api/client/${address}/chart`) as Observable<any[]>;
+    return this.httpClient.get(`${window.location.protocol}//${window.location.hostname}:2019/api/client/${address}/chart`) as Observable<any[]>;
   }
 }
